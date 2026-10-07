@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formualario Ventas</title>
+    <link rel="stylesheet" href="../STATIC/CSS/facturas.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./index_car.html"></script>
+
+
+</head>
+<body>
+<center>
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#">REGISTRESE</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+    <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="../INDEX.HTML">INICIO</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="../TEMPLATES/servicios.html">SERVICIOS</a>
+    </li>
+    <img src="https://i.pinimg.com/736x/57/63/09/57630993165b36a918642725c05665b3.jpg" alt="" height="100px" width="100px">
+    <h1>FACTURA DE TUS PRODUCTOS</h1>
+    <form action="">
+        <!-- seccion  de cabecera de encabezado de factura -->
+        <table>
+            <caption>FACTURA DE VENTAS</caption>
+            <tr>
+                <th>Nombre Cliente</th>
+                <th><input type="text" name="" id="" size="20" required></th>
+                <th>Tipo de documento</th>
+                <th><select name="" id="tp">
+                    <option value="CC">CC</option>
+                    <option value="PPT">PPT</option>
+                    <option value="TI">TI</option>
+                </select></th>
+                <th>No.Documento</th>
+                <th><input type="text" name="" id="" size="25 required"></th>
+            </tr>
+            <!-- 2 fila -->
+            <tr>
+                <th>Direccion</th>
+                <th><input type="text" name="" id="dir" size="20"></th>
+                <th>Telefono</th>
+                <th><input type="text" name="" id="tel" size="20"></th>
+                <th>Empleado</th>
+                <th><input type="text" name="" id="emp" size="25"></th>
+            </tr>
+            <!-- seccion  de cabecera de detalle de factura -->
+
+
+            <tr>
+                <th>REFERENCIA</th>
+                <th colspan="2">VEHÍCULO</th>
+                <th>CANTIDAD</th>
+                <th>VALOR UNITARIO</th>
+                <th>SUBTOTAL</th>
+            </tr>
+            <!-- 1 item  -->
+            <tr>
+                <th>
+<select name="prod1" id="prod1" onchange="mostrar();">
+    <option value="">Seleccionar vehículo</option>
+    <option value="185000000">BMW M4 Competition</option>
+    <option value="240000000">Porsche 911 Carrera</option>
+    <option value="320000000">Lamborghini Huracán</option>
+    <option value="95000000">Yamaha YZF-R1</option>
+    <option value="85000000">Kawasaki Ninja ZX-10R</option>
+    <option value="115000000">Ducati Panigale V4</option>
+</select>
+                </th>
+                <th colspan="2"><input type="text" name="desc01" id="desc01" size="40" readonly></th>
+                <th><input type="number" name="cant01" id="cant01" size="10" onchange="mostrar();"></th>
+                <th><input type="number" name="vau01" id="vau01" size="15" readonly></th>
+                <th><input type="text" name="vat01" id="vat01" size="15" readonly></th>
+            </tr>
+
+
+        <!-- 2 item  -->
+            <tr>
+                <th>
+                    <select name="prod2" id="prod2" onchange="mostrar();">
+    <option value="">Seleccionar vehículo</option>
+    <option value="185000000">BMW M4 Competition</option>
+    <option value="240000000">Porsche 911 Carrera</option>
+    <option value="320000000">Lamborghini Huracán</option>
+    <option value="95000000">Yamaha YZF-R1</option>
+    <option value="85000000">Kawasaki Ninja ZX-10R</option>
+    <option value="115000000">Ducati Panigale V4</option>
+</select>
+                </th>
+                <th colspan="2"><input type="text" name="desc02" id="desc02" size="40" readonly></th>
+                <th><input type="number" name="cant02" id="cant02" size="10" onchange="mostrar();"></th>
+                <th><input type="number" name="vau02" id="vau02" size="15" readonly></th>
+                <th><input type="text" name="vat02" id="vat02" size="15" readonly></th>
+            </tr>
+            <!-- 3 item -->
+            <tr>
+                <th>
+                    <select name="prod3" id="prod3" onchange="mostrar();">
+    <option value="">Seleccionar vehículo</option>
+    <option value="185000000">BMW M4 Competition</option>
+    <option value="240000000">Porsche 911 Carrera</option>
+    <option value="320000000">Lamborghini Huracán</option>
+    <option value="95000000">Yamaha YZF-R1</option>
+    <option value="85000000">Kawasaki Ninja ZX-10R</option>
+    <option value="115000000">Ducati Panigale V4</option>
+</select>
+                </th>
+                <th colspan="2"><input type="text" name="desc03" id="desc03" size="40" readonly></th>
+                <th><input type="number" name="cant03" id="cant03" size="10" onchange="mostrar();"></th>
+                <th><input type="number" name="vau03" id="vau03" size="15" readonly></th>
+                <th><input type="text" name="vat03" id="vat03" size="15" readonly></th>
+            </tr>
+            <!--  seccion de Adicionales -->
+
+
+            <tr>
+    <th colspan="6">SERVICIOS ADICIONALES</th>
+</tr>
+
+<tr>
+    <th colspan="2">
+        <input type="checkbox" name="check1" id="check1" onchange="mostrar();">
+        Seguro vehicular
+    </th>
+
+    <th colspan="2">
+        <input type="checkbox" name="check2" id="check2" onchange="mostrar();">
+        Personalización deportiva
+    </th>
+
+    <th colspan="2">
+        <input type="checkbox" name="check3" id="check3" onchange="mostrar();">
+        Servicio de entrega
+    </th>
+</tr>
+            <!-- SECCION LIQUIDACION FACTURA -->
+            <tr></tr>
+            <tr>
+                <th colspan="4">TOTAL ADICIONALES</th>
+                <th colspan="2"><input type="number" name="adic0" id="adic0" readonly></th>
+            </tr>
+            <tr>
+                <th colspan="2">FORMA DE PAGO</th>
+                <th colspan="2">
+                    <input type="radio" name="fp" id="radio1" value="Efectivo" onchange="mostrar();">Efectivo
+                    <br>
+                    <input type="radio" name="fp" id="radio2" value="Nequi" onchange="mostrar();">Nequi
+                    <br>
+                    <input type="radio" name="fp" id="radio3" value="TjCredito" onchange="mostrar()">Tarjeta de Credito
+                    <br>
+                </th>
+                <!-- SUBTOTAL -->
+                <th>SUBTOTAL</th>
+                <td><input type="text" name="subt" id="subt" size="25" readonly></td>
+            </tr>
+            <tr>
+                <th colspan="4" rowspan="3">OBSERVACIONES: REVISE SU PEDIDO ENTREGADO Y GRACIAS POR ATENDERTE</th>
+                <th>IVA</th>
+                <td><input type="text" name="iva" id="iva" size="25" readonly></td>
+            </tr>
+            <tr>
+                <th>DESCUENTO</th>
+                <td><input type="text" name="desc" id="desc" size="25" readonly></td>
+            </tr>
+            <tr>
+                <th>NETO PAGO</th>
+                <td><input type="text" name="neto" id="neto" size="25" readonly></td>
+            </tr>
+            <tr>
+                <th colspan="2"><input type="reset" value="BORRAR"></th>
+                <th colspan="4"><input type="submit" value="ENVIAR" onclick="generar();"></th>
+            </tr>
+        </table>
+    </form>
+</center>
+<script src="../STATIC/JS/facturas.js"></script>
+<script src="../INDEX.HTML"></script>
+    
+</body>
+</html>
